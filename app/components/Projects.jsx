@@ -5,7 +5,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'A personal developer portfolio built using  Next.js, and Tailwind CSS to showcase skills and projects.',
-      githubLink: '',
+      githubLink: 'https://github.com/23f1001556/portfolio',
     },
     {
       title: 'veichel parking app',

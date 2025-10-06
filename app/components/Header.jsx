@@ -58,11 +58,11 @@ const Header = () => {
           initial={{ y: +25, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          href="/resume.pdf"
+          href="/resume_one.pdf"
           download
           className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition"
         >
-          Download Reume
+          Download Resume
         </motion.a>
       </div>
     </div>

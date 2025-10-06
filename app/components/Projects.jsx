@@ -1,36 +1,92 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Use framer-motion instead of motion/react
 
 const Projects = () => {
+  const [selectedType, setSelectedType] = useState('all');
+
   const projects = [
     {
       title: 'Portfolio Website',
-      description: 'A personal developer portfolio built using  Next.js, and Tailwind CSS to showcase skills and projects.',
+      type: 'web',
+      description: 'A personal developer portfolio built using Next.js and Tailwind CSS.',
       githubLink: 'https://github.com/23f1001556/portfolio',
     },
     {
-      title: 'veichel parking app',
-      description: 'A full-stack viechel parking ap powered  by vue js and flask .',
+      title: 'Vehicle Parking App',
+      type: 'web',
+      description: 'A full-stack vehicle parking app powered by Vue.js and Flask.',
       githubLink: 'https://github.com/23f1001556/Vehicle-Parking-App---V2',
     },
     {
-      title: 'quiz master ',
-      description: 'A full stack quiz app made with rest api flask and bootstrap supporting multiuser ',
+      title: 'Quiz Master',
+      type: 'web',
+      description: 'A full stack quiz app using Flask and Bootstrap supporting multiuser.',
       githubLink: 'https://github.com/23f1001556/quiz-master-v1',
     },
-    
-    
+    {
+      title: 'AI Chatbot',
+      type: 'ai/ml',
+      description: 'A chatbot using NLP and Transformer models (Hugging Face).',
+      githubLink: 'https://github.com/yourname/ai-chatbot',
+    },
+    {
+      title: 'ML Model Trainer',
+      type: 'ai/ml',
+      description: 'Train and evaluate models using Scikit-learn and PyTorch.',
+      githubLink: 'https://github.com/yourname/ml-trainer',
+    },
   ];
 
-  return (
-    <div id="projects" className="w-full px-[8%] py-16 scroll-mt-20 bg-white">
-      <h4 className="text-center text-lg text-gray-500 font-Ovo">Works</h4>
-      <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-16">Projects</h2>
+  const filteredProjects =
+    selectedType === 'all'
+      ? projects
+      : projects.filter((project) => project.type === selectedType);
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map(({ title, description, githubLink }, index) => (
-          <div
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="projects"
+      className="w-full px-[8%] py-16 scroll-mt-20 bg-white"
+    >
+      <h4 className="text-center text-lg text-gray-500 font-Ovo">Works</h4>
+      <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-10">Projects</h2>
+
+      {/* Category Selector Buttons */}
+      <div className="flex justify-center gap-4 mb-10">
+        {['all', 'web', 'ai/ml'].map((type) => (
+          <button
+            key={type}
+            onClick={() => setSelectedType(type)}
+            className={`px-5 py-2 rounded-full border border-gray-300 font-Ovo transition-all duration-300 ${
+              selectedType === type
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+            }`}
+          >
+            {type.toUpperCase()}
+          </button>
+        ))}
+      </div>
+
+      {/* Projects Grid */}
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        {filteredProjects.map(({ title, description, githubLink }, index) => (
+          <motion.div
             key={index}
-            className="border border-gray-300 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between bg-white"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="border border-gray-300 rounded-xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between bg-white hover:bg-pink-100"
           >
             <div>
               <h3 className="text-xl font-semibold font-Ovo mb-3">{title}</h3>
@@ -44,10 +100,10 @@ const Projects = () => {
             >
               View Project &rarr;
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

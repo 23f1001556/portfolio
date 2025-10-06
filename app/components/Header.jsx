@@ -2,6 +2,8 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Typewriter from "./Typewriter";
+
 
 const Header = () => {
   return (
@@ -33,14 +35,12 @@ const Header = () => {
         Full Stack Developer
       </h1>
       <p className="max-w-2xl mx-auto font-Ovo">
-        I am a passionate full stack developer with expertise in building
-        dynamic and responsive web applications. I love creating seamless user
-        experiences and bringing innovative ideas to life through code.
+
+    Driven by curiosity and a love for coding, I specialize in creating seamless web applications that not only look great but also perform flawlessly. From designing intuitive user interfaces to architecting robust backend systems, I’m committed to delivering quality software that solves real problems and delights users.
+
       </p>
       <p className="max-w-2xl mx-auto font-Ovo mt-4">
-        Currently, I’m learning AI and Data Science but mostly focus on
-        Flask/Django backend and Vue.js/Next.js frontend projects. Python is my
-        specialty!
+        I am a <Typewriter />
       </p>
 
       {/* Buttons container */}

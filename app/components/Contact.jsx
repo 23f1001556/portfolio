@@ -1,5 +1,6 @@
-import React from 'react'
-import { FaEnvelope, FaLinkedin, FaPhoneAlt, FaGithub } from 'react-icons/fa'
+import React from 'react';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -14,18 +15,28 @@ const Contact = () => {
       <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-800 text-lg font-Ovo">
 
         {/* Email */}
-        <div className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200"
+        >
           <FaEnvelope className="text-blue-500 mt-1" size={22} />
           <div>
             <p className="text-sm text-gray-500">Email</p>
-            <a href="mailto:youremail@example.com" className="hover:underline break-words">
+            <a href="mailto:sidhantsksk@gmail.com" className="hover:underline break-words">
               sidhantsksk@gmail.com
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* LinkedIn */}
-        <div className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200"
+        >
           <FaLinkedin className="text-blue-700 mt-1" size={22} />
           <div>
             <p className="text-sm text-gray-500">LinkedIn</p>
@@ -38,10 +49,15 @@ const Contact = () => {
               linkedin.com/in/sidhantkumarsk
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* GitHub */}
-        <div className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex items-start gap-4 hover:scale-[1.02] transition-transform duration-200"
+        >
           <FaGithub className="text-gray-700 mt-1" size={22} />
           <div>
             <p className="text-sm text-gray-500">GitHub</p>
@@ -54,10 +70,11 @@ const Contact = () => {
               github.com/23f1001556
             </a>
           </div>
-        </div>
+        </motion.div>
+
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

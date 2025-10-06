@@ -23,7 +23,8 @@ export const toolsData = [
   assets.linux,
   assets.java,
   assets.js,
-  assets.git
+  assets.git,
+  assets.api
 ];
 
 
@@ -150,12 +151,20 @@ const About = () => {
             ))}
           </motion.ul>
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 font-Ovo">
+            <motion.h3
+             initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl font-semibold mb-4 text-gray-800 font-Ovo">
               Tech Stacks I Use
-            </h3>
-            <div className="flex flex-wrap gap-6 items-center">
+            </motion.h3>
+            <div
+             className="flex flex-wrap gap-6 items-center">
               {toolsData.map((tool, index) => (
-                <div
+                <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
                   key={index}
                   className="w-12 h-12 sm:w-14 sm:h-14 relative hover:scale-110 transition-transform"
                 >
@@ -165,7 +174,7 @@ const About = () => {
                     layout="fill"
                     objectFit="contain"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

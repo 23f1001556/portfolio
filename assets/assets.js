@@ -20,6 +20,8 @@ import terminal from './img/terminal.svg';
 import ml from './img/ml.svg';
 import hand from './img/hand.svg';
 import node from './img/node.svg';
+import header_bg_color from '@/assets/img/header-bg-color.png';
+
 // import hand_icon from './img/hand-icon.svg'
 
 
@@ -44,7 +46,8 @@ export const assets = {
     hand,
     next,
     vue,
-    node
+    node,
+    header_bg_color
    
 
 

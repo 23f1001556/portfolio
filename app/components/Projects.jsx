@@ -12,6 +12,7 @@ const Projects = () => {
       type: 'web',
       description: 'A personal developer portfolio built using Next.js and Tailwind CSS.',
       githubLink: 'https://github.com/23f1001556/portfolio',
+      appLink:'https://portfolio-r6l4.vercel.app/',
     },
     {
       title: 'Vehicle Parking App',

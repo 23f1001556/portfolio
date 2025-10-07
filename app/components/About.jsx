@@ -108,7 +108,7 @@ const About = () => {
           >
             <li>
               🎓 <strong>B.S. in Data Science and Programming</strong> — Indian
-              Institute Of Technology Madras (2023–2027)
+              Institute Of Technology Madras (2023–2026)
               <a
                 href="https://ds.study.iitm.ac.in/student/23F1001556"
                 target="_blank"

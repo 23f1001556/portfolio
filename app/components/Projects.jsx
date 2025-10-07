@@ -24,6 +24,7 @@ const Projects = () => {
       type: 'web',
       description: 'A full stack quiz app using Flask and Bootstrap supporting multiuser.',
       githubLink: 'https://github.com/23f1001556/quiz-master-v1',
+      appLink:'https://quiz-master-v1-dhtr.onrender.com/',
     },
     {
       title: 'AI Chatbot',
@@ -79,29 +80,41 @@ const Projects = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        {filteredProjects.map(({ title, description, githubLink }, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="border border-gray-300 rounded-xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between bg-white hover:bg-pink-100"
-          >
-            <div>
-              <h3 className="text-xl font-semibold font-Ovo mb-3">{title}</h3>
-              <p className="text-gray-700 font-Ovo text-base mb-6">{description}</p>
-            </div>
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-indigo-600 hover:text-indigo-800 font-semibold"
-            >
-              View Project &rarr;
-            </a>
-          </motion.div>
-        ))}
+        {filteredProjects.map(({ title, description, githubLink, appLink }, index) => (
+  <motion.div
+    key={index}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.2 }}
+    viewport={{ once: true }}
+    className="border border-gray-300 rounded-xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between bg-white hover:bg-pink-100"
+  >
+    <div>
+      <h3 className="text-xl font-semibold font-Ovo mb-3">{title}</h3>
+      <p className="text-gray-700 font-Ovo text-base mb-6">{description}</p>
+    </div>
+    <a
+      href={githubLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block text-indigo-600 hover:text-indigo-800 font-semibold"
+    >
+      View Project &rarr;
+    </a>
+
+    {appLink && (
+      <a
+        href={appLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block text-indigo-600 hover:text-indigo-800 font-semibold mt-2"
+      >
+        Visit App &rarr;
+      </a>
+    )}
+  </motion.div>
+))}
+
       </motion.div>
     </motion.div>
   );

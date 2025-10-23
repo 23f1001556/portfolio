@@ -22,9 +22,10 @@ import hand from './img/hand.svg';
 import node from './img/node.svg';
 import api from './img/api.svg';
 import header_bg_color from '@/assets/img/header-bg-color.png';
-
+// import resume from './public/resume.pdf';
 // import hand_icon from './img/hand-icon.svg'
-
+import typescript from './img/typescript.svg'
+import { TbBrandTypescript } from 'react-icons/tb';
 
 
 export const assets = {
@@ -49,13 +50,13 @@ export const assets = {
     vue,
     node,
     header_bg_color,
-    api
-   
+    api,
+    typescript
 
 
 };
 
 export const toolsData = [
-   assets.vscode,  assets.git,assets.github, assets.vue, assets.next,assets.react,assets.express,assets.postgres,assets.mongodb,assets.node
+   assets.vscode,  assets.git,assets.github, assets.vue, assets.next,assets.react,assets.express,assets.typescript,assets.postgres,assets.mongodb,assets.node
 
 ];

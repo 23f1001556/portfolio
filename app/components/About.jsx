@@ -24,7 +24,8 @@ export const toolsData = [
   assets.java,
   assets.js,
   assets.git,
-  assets.api
+  assets.api,
+  assets.typescript
 ];
 
 

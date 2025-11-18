@@ -48,6 +48,17 @@ const Projects = () => {
         'Frontend: Next.js, React, Tailwind CSS, Shadcn/UI\nBackend: Next.js API, Prisma, Neon Postgres\nAuth: Kinde, Arcjet\nRealtime: Cloudflare Durable Objects\nDeployment: Vercel\nExtras: Chart.js, Uploadthing, Zod',
       githubLink: 'https://github.com/23f1001556/Loop',
     },
+    {
+      title: 'LensTales',
+      type: 'ai/ml',
+      description: 'An Ai powered photography portfolio',
+      details:
+        'Developing a full-stack SaaS platform for university students to manage campus resources, communication, and AI-assisted tools. Includes real-time messaging, analytics, and authentication.',
+      stacks:
+        'Frontend: Vuejs\nAuth: Firebase \nDeployment: Vercel',
+      githubLink: 'https://github.com/23f1001556/LensTales',
+      appLink: 'https://lens-tales.vercel.app/',
+    }
   ];
 
   const filteredProjects =

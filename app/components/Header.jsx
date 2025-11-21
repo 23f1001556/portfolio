@@ -8,6 +8,17 @@ import Typewriter from "./Typewriter";
 const Header = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      
+       {/* Background Image */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <Image
+          src={assets.header_bg_color}
+          alt="Background"
+          fill
+          className="object-cover"
+        />
+      </div>
+
       <div className="w-48 h-48 rounded-full overflow-hidden">
         <motion.div
           initial={{ scale: 0 }}

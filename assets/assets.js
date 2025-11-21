@@ -27,6 +27,7 @@ import header_bg_color from '@/assets/img/header-bg-color.png';
 import typescript from './img/typescript.svg'
 import { TbBrandTypescript } from 'react-icons/tb';
 
+import portfolio from './img/portfolio.png';
 
 export const assets = {
     //mine
@@ -51,12 +52,12 @@ export const assets = {
     node,
     header_bg_color,
     api,
-    typescript
-
+    typescript,
+    portfolio
 
 };
 
 export const toolsData = [
-   assets.vscode,  assets.git,assets.github, assets.vue, assets.next,assets.react,assets.express,assets.typescript,assets.postgres,assets.mongodb,assets.node
+   assets.vscode,  assets.git,assets.github, assets.vue, assets.next,assets.react,assets.express,assets.typescript,assets.postgres,assets.mongodb,assets.node,assets.protfolio
 
 ];

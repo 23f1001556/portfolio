@@ -119,7 +119,7 @@ const About = () => {
                 <Image
                   src={assets.arrow_icon}
                   alt="IITM Profile Photo"
-                  width={15} // You can change size
+                  width={15} 
                   height={5}
                   className="rounded-full hover:scale-200 transition duration-300"
                 />

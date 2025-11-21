@@ -5,6 +5,7 @@ import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact";
 import Certification from "./components/Certification";
+
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
     <Projects/>
     <Certification/>
     <Contact/>
+    
     </>
 
 

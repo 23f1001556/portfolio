@@ -98,8 +98,8 @@ export default function Projects() {
       {/* Projects Grid with hover effect */}
       <motion.ul
         initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 "
       >
         {filteredProjects.map(

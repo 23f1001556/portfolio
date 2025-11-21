@@ -47,31 +47,7 @@ const Projects = () => {
       video: "/videos/quizmaster_sample.mp4",
       route: "/projects/quiz-master"
     },
-    {
-      title: "Loop",
-      type: "ai/ml",
-      description: "A SaaS + AI communication platform.",
-      details:
-        "Messaging, analytics, auth, real-time updates and AI tools.",
-      stacks:
-        "Next.js, Tailwind, Prisma, Neon, Cloudflare, Kinde, Chart.js",
-      githubLink: "https://github.com/23f1001556/Loop",
-      deployed: false,
-      video: "/sample.mp4",
-      route: "#"
-    },
-    {
-      title: "LensTales",
-      type: "ai/ml",
-      description: "AI-powered photography portfolio.",
-      details: "Vue.js frontend with Firebase authentication.",
-      stacks: "Vue.js, Firebase, Vercel",
-      githubLink: "https://github.com/23f1001556/LensTales",
-      appLink: "#",
-      deployed: false,
-      video: "/videos/LensTales_sample.mp4",
-      route: "#"
-    }
+
   ];
 
   const filteredProjects =
@@ -99,11 +75,10 @@ const Projects = () => {
             <button
               key={type}
               onClick={() => setSelectedType(type)}
-              className={`px-5 py-2 rounded-full border border-gray-300 font-Ovo transition-all duration-300 ${
-                selectedType === type
+              className={`px-5 py-2 rounded-full border border-gray-300 font-Ovo transition-all duration-300 ${selectedType === type
                   ? "bg-indigo-600 text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100"
-              }`}
+                }`}
             >
               {type.toUpperCase()}
             </button>
@@ -148,9 +123,8 @@ const Projects = () => {
                 {/* Status */}
                 <div className="flex items-center gap-2 mb-3">
                   <span
-                    className={`h-3 w-3 rounded-full ${
-                      deployed ? "bg-green-500" : "bg-red-500"
-                    }`}
+                    className={`h-3 w-3 rounded-full ${deployed ? "bg-green-500" : "bg-red-500"
+                      }`}
                   ></span>
                   <p className="text-sm text-gray-700 font-Ovo">
                     {deployed
@@ -187,12 +161,27 @@ const Projects = () => {
                     View Details →
                   </Link>
                 </div>
+
+
               </motion.div>
             )
           )}
         </motion.div>
       </motion.div>
 
+      {/* VIEW ALL PROJECTS BUTTON */}
+      <div className="flex justify-center mt-12 relative -top-4 bg-white p-1 rounded-md border-l border-r border-black">
+        <Link
+          href="/projects"
+          className="px-5 py-2 font-Ovo text-base text-black
+               bg-gradient-to-r from-gray-200 to-gray-400
+               rounded-md shadow-md
+               hover:from-gray-300 hover:to-gray-500
+               transition-all duration-300 block text-center"
+        >
+          View All Projects →
+        </Link>
+      </div>
       {/* VIDEO MODAL */}
       <AnimatePresence>
         {videoModal && (

@@ -76,8 +76,9 @@ export default function Quizmaster() {
           className="rounded-xl border-4 border-gray-200 mx-auto"
         />
         <div className="flex justify-center gap-4 mt-4">
-          <span className="bg-green-600 text-white px-4 py-1 rounded">Completed</span>
-          <span className="bg-black text-white px-4 py-1 rounded">Hosted on Vercel</span>
+          <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-Ovo">Project Completed</span>
+          <span className="bg-black text-white px-4 py-1 rounded-full text-sm font-Ovo">Hosted on Render</span>
+
         </div>
       </motion.section>
 

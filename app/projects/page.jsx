@@ -29,7 +29,7 @@ export default function Projects() {
       githubLink: "https://github.com/23f1001556/Vehicle-Parking-App---V2",
       deployed: false,
       route: "#",
-      image: "/diploma_1.png",
+      image: "/vehicle.jpg",
       stack: ["Vue.js", "Flask", "SQLite"]
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
       githubLink: "https://github.com/23f1001556/Loop",
       deployed: false,
       route: "#",
-      image: "/diploma_1.png",
+      image: "/loop.jpg",
       stack: ["Next.js", "Tailwind", "Prisma", "Neon"]
     },
     {
@@ -61,7 +61,7 @@ export default function Projects() {
       appLink: "#",
       deployed: false,
       route: "#",
-      image: "/diploma_1.png",
+      image: "/lenstales.jpg",
       stack: ["Vue.js", "Firebase", "Vercel"]
     }
   ];
